@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
--webkit-transition: ${1:all} 0.3s;
-        transition: ${1:all} 0.3s;
+-webkit-transform: ${1:...};
+        transform: ${1:...};
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>transition</tabTrigger>
+	<tabTrigger>transform</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.css</scope>
 </snippet>
