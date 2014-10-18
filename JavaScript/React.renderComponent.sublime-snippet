@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 React.renderComponent(
-    <${1:Element} $3/>
+    <${1:Element} $3/>,
     document.getElementById('${2:id}')
 );
 ]]></content>
