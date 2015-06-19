@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+var auth = require('basic-auth');
+app.use(function(req, res, next) {
+    var user = auth(req);
+
+    if (
+        user === undefined
+        ||
+        user['name'] !== config.get('ADMIN_USER')
+        ||
+        user['pass'] !== config.get('ADMIN_PASS')
+    ) {
+        res.statusCode = 401;
+        res.setHeader('WWW-Authenticate', 'Basic realm="Who are you?"');
+        res.end('Unauthorized');
+    } else {
+        next();
+    }
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>auth</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
